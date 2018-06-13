@@ -139,9 +139,6 @@ class Experiment:
                 self.qc.measure(self.q[i], i)
         elif qubits:
             for index, q in enumerate(qubits):
-                print(self.c)
-                print(classical_bits[index])
-                print(self.c[classical_bits[index]])
                 self.qc.measure(self.q[q], self.c[classical_bits[index]][0])
                 print("measured q: {}, c: {}".format(self.q[q], self.c[classical_bits[index]]))
 
