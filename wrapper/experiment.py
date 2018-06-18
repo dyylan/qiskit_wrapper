@@ -1,6 +1,7 @@
 from IBMQuantumExperience import IBMQuantumExperience
 from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister, register, execute
 import Qconfig
+import inspect 
 
 class Experiment:
     """ Experiment class for defining config, connecting to IBMQ and setting up quantum circuit. """
@@ -16,6 +17,7 @@ class Experiment:
         self.register_initialised = False
         self.qc_initialised = False
         self.coupling_map = False
+        self.results = False
 
     def connect_to_IBM(self, verify=False):
         """ Connect to IMB quantum experience using the class token value and config. """
@@ -143,6 +145,7 @@ class Experiment:
                 print("measured q: {}, c: {}".format(self.q[q], self.c[classical_bits[index]]))
 
     def compile_and_run(self):
+        """ Compile the quantum code and run on the selected backend. """
         if self.register_initialised and self.qc_initialised:
             print("Running on backend: {}".format(self.backend))
             if self.coupling_map:
@@ -151,10 +154,23 @@ class Experiment:
             else:
                 job = execute(self.qc, backend=self.backend, shots=self.shots)
             result = job.result()
-            print("Result: {}".format(result))
-            print(result.get_counts(self.qc))
+            self.data = result.get_counts(self.qc)
+            self.results = True
+            #print(result.get_data())
+            #print(inspect.getmembers(result, predicate=inspect.ismethod))
+            #print(result.get_ran_qasm(self.qc))
+            print("Status: {} \nMeasurement result: {}".format(result, self.data))
         else:
             print("Initialise register and quantum circuit first.")
+
+    def get_data(self):
+        """ Return the result of the experiment in the form of a dictionary 
+            with all combinations of measurements and the counts. 
+        """
+        if self.results:
+            return self.data
+        else:
+            print("Compile and run the experiment first!")
 
     @staticmethod
     def IBMQ_register():

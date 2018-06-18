@@ -7,7 +7,7 @@ def main():
     local_sim = "local_qasm_simulator" 
     remote_sim = remote_simulator[0]
     remote_machine = "ibmqx2"
-    backend = remote_sim
+    backend = local_sim
     #entanglement(backend)
     teleport(backend)
 
