@@ -1,7 +1,7 @@
 # qiskit_wrapper
 Running IBM Q experiments. Simple python to make it easier. The intention is also to add visualisation and a range of different algorithms. 
 
-## Simple wrapper made from:
+## Simple wrapper made from
 - [ibmqx backend information](https://github.com/QISKit/ibmqx-backend-information) Information about the different IBM Q experience backends.
 - [ibmqx user guide](https://github.com/QISKit/ibmqx-user-guides) The users guides for the IBM Q experience.
 - [Python API](https://github.com/QISKit/qiskit-api-py) API Client to use IBM Q experience in Python.
