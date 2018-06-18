@@ -1,5 +1,5 @@
 # qiskit_wrapper
-Running IBM Q experiments
+Running IBM Q experiments. Simple python to make it easier. The intention is also to add visualisation and a range of different algorithms. 
 
 ## Simple wrapper made from:
 - [ibmqx backend information](https://github.com/QISKit/ibmqx-backend-information) Information about the different IBM Q experience backends.
@@ -14,7 +14,7 @@ Running IBM Q experiments
 - Install pipenv with
 > pip install pipenv
 
-# Run an experiment on the IBM Quantum computer
+### Run an experiment on the IBM Quantum computer
 - Clone this repository
 - Install all the required packages
 > pipenv install
