@@ -22,4 +22,4 @@ Running IBM Q experiments. Simple python to make it even easier. The intention i
 > TOKEN = *"your token here"*
 - Alternatively, simply update the *Qconfig.py* file with your token directly
 4. Open *main.py* and check the function **main**. This is where the backend and which experiment is run can be chosen
-5. Have a look at the *circuits.py* file for a list of experiments that can be run
+5. Have a look at *circuits.py* for a list of experiments that can be run
