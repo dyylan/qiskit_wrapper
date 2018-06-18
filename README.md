@@ -6,3 +6,15 @@ Running IBM Q experiments
 - [ibmqx user guide](https://github.com/QISKit/ibmqx-user-guides) The users guides for the IBM Q experience.
 - [Python API](https://github.com/QISKit/qiskit-api-py) API Client to use IBM Q experience in Python.
 - [Python SDK](https://github.com/QISKit/qiskit-sdk-py) Software development kit for working with quantum programs in Python.
+
+## How to use the wrapper
+### Prerequisites 
+- Python 3.6
+- Get a token from IBMQ, start here: https://quantumexperience.ng.bluemix.net/qx/experience 
+- Install pipenv with
+> pip install pipenv
+
+# Run an experiment on the IBM Quantum computer
+- Clone this repository
+- Install all the required packages
+> pipenv install
