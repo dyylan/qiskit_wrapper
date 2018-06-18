@@ -1,6 +1,6 @@
-from experiment import Experiment
+from wrapper.experiment import Experiment
 from qiskit import available_backends
-from circuits import entanglement, teleport
+from wrapper.circuits import entanglement, teleport
 
 def main():
     remote_backends, remote_simulator, local_simulators = backend_lists()
